@@ -4,8 +4,9 @@ import datetime
 import schedule
 from fbprophet import Prophet
 
-access = "your-access"
-secret = "your-secret"
+access = "RezwD3ZpSnG7x4xxb6rP3tBL0aXxEA5xQDWYoKax"
+secret = "xcwRigN9QfxxgAQa4tiNrcFdh8UJ6XB7AhbcySmR"
+
 
 def get_target_price(ticker, k):
     """변동성 돌파 전략으로 매수 목표가 조회"""
@@ -13,11 +14,13 @@ def get_target_price(ticker, k):
     target_price = df.iloc[0]['close'] + (df.iloc[0]['high'] - df.iloc[0]['low']) * k
     return target_price
 
+
 def get_start_time(ticker):
     """시작 시간 조회"""
     df = pyupbit.get_ohlcv(ticker, interval="day", count=1)
     start_time = df.index[0]
     return start_time
+
 
 def get_balance(ticker):
     """잔고 조회"""
@@ -30,9 +33,11 @@ def get_balance(ticker):
                 return 0
     return 0
 
+
 def get_current_price(ticker):
     """현재가 조회"""
     return pyupbit.get_orderbook(ticker=ticker)["orderbook_units"][0]["ask_price"]
+
 
 predicted_close_price = 0
 def predict_price(ticker):

@@ -286,5 +286,5 @@ $RECYCLE.BIN/
 /JupyterNotebooks/Ch5_Object Detection_student.ipynb
 /Assignments/장민준_2019145094_Assignment5.ipynb
 
-upbitApiKet.txt
-upbit_aws.pem
+*.txt
+*.pem

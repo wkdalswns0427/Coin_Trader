@@ -4,8 +4,8 @@ import datetime
 import schedule
 from fbprophet import Prophet
 
-access = "RezwD3ZpSnG7x4xxb6rP3tBL0aXxEA5xQDWYoKax"
-secret = "xcwRigN9QfxxgAQa4tiNrcFdh8UJ6XB7AhbcySmR"
+access = "***************************************"
+secret ="***************************************"
 
 
 def get_target_price(ticker, k):
